@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jacoborus/tender.vim' " color scheme tender
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'elixir-editors/vim-elixir'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
