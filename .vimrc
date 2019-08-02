@@ -25,7 +25,7 @@ filetype plugin indent on    " required
 set number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
-set textwidth=100	" Line wrap (number of cols)
+set textwidth=200	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set visualbell	" Use visual bell (no beeping)
  
@@ -41,7 +41,15 @@ set smarttab	" Enable smart-tabs
 set softtabstop=2	" Number of spaces per Tab
 
 let mapleader = ","
+
+" Make sure that coursor is always vertically centered on j/k moves
+set so=999
+" add vertical lines on columns
+set colorcolumn=80,120
+" Sets how many lines of history VIM has to remember
+set history=700
  
+
 " Advanced
 set ruler	" Show row and column ruler information
  
