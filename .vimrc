@@ -194,6 +194,9 @@ set viminfo='20,\"50,:20,/20,%,n~/.viminfo.go
 " tabpages - all tab pages
 set sessionoptions=blank,buffers,curdir,folds,help,options,winsize,tabpages
 
+" Diff не сохраненных данных
+command Unsaved execute "w !diff % -"
+
 "------------------------------------------------------------------------------
 " Visual mode related
 "------------------------------------------------------------------------------
