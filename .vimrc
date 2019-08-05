@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim' " find files in console
 Plugin 'jacoborus/tender.vim' " color scheme tender
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
