@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim' " find files in console
+Plugin 'airblade/vim-gitgutter' " git change highlighter
 Plugin 'jacoborus/tender.vim' " color scheme tender
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -196,6 +197,15 @@ set sessionoptions=blank,buffers,curdir,folds,help,options,winsize,tabpages
 
 " Diff не сохраненных данных
 command Unsaved execute "w !diff % -"
+
+" Delete trailing white space on save, useful for Elixir ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.ex :call DeleteTrailingWS()
+autocmd BufWrite *.exs :call DeleteTrailingWS()
 
 "------------------------------------------------------------------------------
 " Visual mode related
