@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim' " find files in console
+Plugin 'tpope/vim-fugitive' " git command wrapper
 Plugin 'airblade/vim-gitgutter' " git change highlighter
 Plugin 'jacoborus/tender.vim' " color scheme tender
 Plugin 'vim-airline/vim-airline'
