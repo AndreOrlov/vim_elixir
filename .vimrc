@@ -12,10 +12,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim' " find files in console
+Plugin 'tpope/vim-fugitive' " git command wrapper
+Plugin 'airblade/vim-gitgutter' " git change highlighter
 Plugin 'jacoborus/tender.vim' " color scheme tender
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'posva/vim-vue' " vue component syntax highlight
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,6 +197,18 @@ set viminfo='20,\"50,:20,/20,%,n~/.viminfo.go
 " tabpages - all tab pages
 set sessionoptions=blank,buffers,curdir,folds,help,options,winsize,tabpages
 
+" Diff не сохраненных данных
+command Unsaved execute "w !diff % -"
+
+" Delete trailing white space on save, useful for Elixir ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.ex :call DeleteTrailingWS()
+autocmd BufWrite *.exs :call DeleteTrailingWS()
+
 "------------------------------------------------------------------------------
 " Visual mode related
 "------------------------------------------------------------------------------
@@ -285,3 +301,4 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
+noremap <leader>n :NERDTreeFind<CR>
