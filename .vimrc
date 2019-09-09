@@ -40,6 +40,7 @@ set mat=2           " How many tenths of a second to blink when matching bracket
 set showcmd         " Show (partial) commands (or size of selection in Visual mode) in the status line
 set hid             " A buffer becomes hidden when it is abandoned
 set foldcolumn=0    " Make sure that extra margin on left is removed
+set autoread        " Set autoread file
 
 " No annoying sound on errors
 set noerrorbells
